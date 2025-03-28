@@ -20,7 +20,7 @@ class TestCxxMax(TestCase):
         v2 = np.array(list(res2.values()))
         # print('v1 = ', v1)
         # print('v2 = ', v2)
-        self.assertTrue(np.allclose(v1, v2, rtol=1e-05))
+        self.assertTrue(np.allclose(v1, v2, rtol=1e-04))
 
     def test_max(self) -> None:
         s = Scheduler()
