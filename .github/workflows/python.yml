@@ -50,11 +50,11 @@ jobs:
     - name: Pip freeze
       if: failure()
       run: |
-        mkdir -p downloads/${{ matrix.python }}/
-        python -m pip freeze > downloads/${{ matrix.python }}/pip_freeze.txt
+        mkdir -p downloads_/${{ matrix.python }}/
+        python -m pip freeze > downloads_/${{ matrix.python }}/pip_freeze.txt
     - name: Upload frozen env
       if: failure()
       uses: actions/upload-artifact@v4
       with:
         name: pip-freeze
-        path: downloads
+        path: downloads_
